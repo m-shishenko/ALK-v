@@ -3508,42 +3508,61 @@ function showBlocks() {
     var anArrayOfUniqueNumbers = [];
     numberGenerator(anArrayOfUniqueNumbers, elementsShow.causesItem.length);
     var oldScrollTopPosition = 0;
+    var oldScrollTopPosition2 = 0;
     var startPos = 0;
+    var startPos2 = 0;
     window.addEventListener("scroll", function () {
       try {
         var setions = {
           choice: document.querySelector(".choice").getBoundingClientRect(),
           causes: document.querySelector(".causes").getBoundingClientRect(),
-          diagramBox: document.querySelector(".diagram__box").getBoundingClientRect()
+          diagramBox: document.querySelector(".diagram__box").getBoundingClientRect(),
+          hiking: document.querySelector(".hiking").getBoundingClientRect()
         };
 
         if (setions.choice.top <= 700) {
           elementsShow.choiceWrapper.classList.add("show");
         }
 
-        if (setions.causes.top <= 200) {
+        if (setions.causes.top <= 400) {
           elementsShow.cat.classList.add("show");
           anArrayOfUniqueNumbers.forEach(function (item, i) {
             elementsShow.causesItem[item].classList.add("show");
             elementsShow.causesItem[item].style.transitionDelay = "".concat(200 * i, "ms");
-          }); // console.log(document.querySelector(".causes").offsetHeight);
-          // console.log(setions.causes.top);
-
+          });
           var scrollTopPosition = document.documentElement.scrollTop;
 
           if (document.querySelector(".causes").offsetHeight > -setions.causes.top) {
             if (oldScrollTopPosition > scrollTopPosition) {
               // scroll top
-              puch[0].style.transform = "translate(500px, ".concat(startPos += 0.5, "px) rotate(-10deg)");
-              puch[1].style.transform = "translate(670px, ".concat(startPos += 0.5, "px) rotate(20deg)");
+              puch[0].style.transform = "translateY(".concat(startPos += 0.7, "px) rotate(-10deg)");
+              puch[1].style.transform = "translateY(".concat(startPos += 0.7, "px) rotate(20deg)");
             } else {
               // scroll down
-              puch[0].style.transform = "translate(500px, ".concat(startPos -= 0.5, "px) rotate(-10deg)");
-              puch[1].style.transform = "translate(670px, ".concat(startPos -= 0.5, "px) rotate(20deg)");
+              puch[0].style.transform = "translateY(".concat(startPos -= 0.7, "px) rotate(-10deg)");
+              puch[1].style.transform = "translateY(".concat(startPos -= 0.7, "px) rotate(20deg)");
             }
           }
 
           oldScrollTopPosition = scrollTopPosition;
+        }
+
+        if (setions.hiking.top <= 200) {
+          var scrollTopPosition2 = document.documentElement.scrollTop;
+
+          if (document.querySelector(".hiking").offsetHeight > -setions.causes.top) {
+            if (oldScrollTopPosition2 > scrollTopPosition2) {
+              // scroll top
+              puch[2].style.transform = "translateY(20px) rotate(20deg)";
+              puch[3].style.transform = "translateY(20px) rotate(-10deg)";
+            } else {
+              // scroll down
+              puch[2].style.transform = "translateY(-30px) rotate(20deg)";
+              puch[3].style.transform = "translateY(-30px) rotate(-10deg)";
+            }
+          }
+
+          oldScrollTopPosition2 = scrollTopPosition2;
         }
 
         if (setions.diagramBox.top <= 200) {
