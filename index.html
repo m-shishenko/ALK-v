@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" href="/fonts/Artico.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoExpandedLight.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoExpanded.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoExpandedMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoExpandedBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/ArticoExpandedExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/Artico.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoExpandedLight.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoExpanded.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoExpandedMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoExpandedBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/ArticoExpandedExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
     <title>ALK</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
@@ -335,32 +335,40 @@
 
       <section class="causes">
   <div class="container">
-    <ul class="causes__list">
-      <li class="causes__item">
-        <div class="causes__item-inner"><span class="red">Страшно</span>, что дальше будет только хуже</div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner">Постоянно <span class="red">насморк</span> и <span class="red">слезятся глаза</span></div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner"><span class="red">Всё цветёт</span>, опять дома сидеть</div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner">Без лекарств вообще <span class="red">никак</span></div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner">У ребёнка <span class="red">диатез</span></div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner"><span class="red">Голова ватная</span>, невозможно сосредоточиться</div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner">Нельзя завести <span class="red">кошку</span></div>
-      </li>
-      <li class="causes__item">
-        <div class="causes__item-inner">Сколько врачей, <span class="red">столько и мнений…</span></div>
-      </li>
-    </ul>
+    <div class="causes__wrapper-list">
+      <button class="causes__btn-prev">
+        <img width="17" height="17" src="./img/causes/arrow.svg" alt="стрелка для предыдущего блока">
+      </button>
+      <ul class="causes__list">
+        <li class="causes__item">
+          <div class="causes__item-inner"><span class="red">Страшно</span>, что дальше будет только хуже</div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner">Постоянно <span class="red">насморк</span> и <span class="red">слезятся глаза</span></div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner"><span class="red">Всё цветёт</span>, опять дома сидеть</div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner">Без лекарств вообще <span class="red">никак</span></div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner">У ребёнка <span class="red">диатез</span></div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner"><span class="red">Голова ватная</span>, невозможно сосредоточиться</div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner">Нельзя завести <span class="red">кошку</span></div>
+        </li>
+        <li class="causes__item">
+          <div class="causes__item-inner">Сколько врачей, <span class="red">столько и мнений…</span></div>
+        </li>
+      </ul>
+      <button class="causes__btn-next">
+        <img width="17" height="17" src="./img/causes/arrow.svg" alt="стрелка для следующего блока">
+      </button>
+    </div>
   </div>
   <div class="puch">
     <img src="./img/causes/od-2.png" alt="">
